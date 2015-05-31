@@ -75,7 +75,6 @@ RUN chown -R www-data:www-data /var/www/wordpress
 #
 RUN gem install json --no-ri --no-rdoc
 RUN gem install wordmove --no-ri --no-rdoc
-RUN wordmove init
 
 #
 # Open ports
