@@ -14,6 +14,7 @@ RUN apt-get update \
       mysql-server \
       mysql-client \
       ruby \
+      ruby-dev \
       curl \
       supervisor \
       ca-certificates \
