@@ -16,6 +16,7 @@ RUN apt-get update \
       ruby \
       ruby-dev \
       build-essential \
+      openssh-client \
       rsync \
       curl \
       supervisor \
