@@ -14,13 +14,13 @@ RUN apt-get update \
       mysql-server \
       mysql-client \
       ruby \
-      libgemplugin-ruby \
       curl \
       supervisor \
       ca-certificates \
       vim \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get install libgemplugin-ruby
 
 RUN gem install wordmove --no-ri --no-rdoc
 
