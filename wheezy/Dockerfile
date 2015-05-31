@@ -17,6 +17,7 @@ RUN apt-get update \
       ruby-dev \
       build-essential \
       rsync \
+      openssh-client \
       curl \
       supervisor \
       ca-certificates \
