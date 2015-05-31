@@ -18,6 +18,7 @@ RUN apt-get update \
       build-essential \
       openssh-client \
       rsync \
+      lftp \
       curl \
       supervisor \
       ca-certificates \
