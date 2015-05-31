@@ -13,11 +13,15 @@ RUN apt-get update \
       php5-mysql \
       mysql-server \
       mysql-client \
+      ruby \
+      ruby-dev \
+      build-essential \
       curl \
       supervisor \
       ca-certificates \
       vim \
     && rm -rf /var/lib/apt/lists/*
+
 
 #
 # Apache Settings
@@ -61,6 +65,13 @@ RUN sed -i -e "s/^bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/my.cnf \
     && wp plugin update --allow-root --all \
     && rm -rf /wp-config-extra
 RUN chown -R www-data:www-data /var/www/wordpress
+
+#
+# Install and init Wordmove
+#
+RUN gem install json --no-ri --no-rdoc
+RUN gem install wordmove --no-ri --no-rdoc
+RUN wordmove init
 
 #
 # Open ports
