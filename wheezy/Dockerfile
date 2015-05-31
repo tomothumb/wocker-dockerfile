@@ -17,6 +17,8 @@ RUN apt-get update \
       supervisor \
       ca-certificates \
       vim \
+      ruby \
+      ruby-dev \
     && rm -rf /var/lib/apt/lists/*
 
 #
