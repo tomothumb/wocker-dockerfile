@@ -13,13 +13,16 @@ RUN apt-get update \
       php5-mysql \
       mysql-server \
       mysql-client \
+      ruby \
+      ruby-dev \
       curl \
       supervisor \
       ca-certificates \
       vim \
-      ruby \
-      ruby-dev \
     && rm -rf /var/lib/apt/lists/*
+
+
+gem install wordmove --no-ri --no-rdoc
 
 #
 # Apache Settings
