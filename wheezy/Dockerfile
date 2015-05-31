@@ -20,8 +20,8 @@ RUN apt-get update \
       vim \
     && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install -y --no-install-recommends \
-    libgemplugin-ruby \
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+      libgemplugin-ruby \
     && rm -rf /var/lib/apt/lists/*
 
 
