@@ -22,7 +22,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 
-gem install wordmove --no-ri --no-rdoc
+RUN gem install wordmove --no-ri --no-rdoc
 
 #
 # Apache Settings
