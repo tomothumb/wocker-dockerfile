@@ -16,15 +16,12 @@ RUN apt-get update \
       ruby \
       ruby-dev \
       build-essential \
+      rsync \
       curl \
       supervisor \
       ca-certificates \
       vim \
     && rm -rf /var/lib/apt/lists/*
-
-#RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-#      libgemplugin-ruby \
-#    && rm -rf /var/lib/apt/lists/*
 
 
 #
