@@ -14,14 +14,14 @@ RUN apt-get update \
       mysql-server \
       mysql-client \
       ruby \
-      ruby-dev \
       curl \
       supervisor \
       ca-certificates \
       vim \
     && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install libgemplugin-ruby \
+RUN apt-get install -y --no-install-recommends \
+    libgemplugin-ruby \
     && rm -rf /var/lib/apt/lists/*
 
 
