@@ -19,9 +19,11 @@ RUN apt-get update \
       ca-certificates \
       vim \
       less \
-
+      rsync \
+      openssh-server \
       ruby \
-
+      ruby-dev \
+      lftp \
     && rm -rf /var/lib/apt/lists/*
 
 #
