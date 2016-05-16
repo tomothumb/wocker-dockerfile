@@ -19,6 +19,9 @@ RUN apt-get update \
       ca-certificates \
       vim \
       less \
+
+      ruby \
+
     && rm -rf /var/lib/apt/lists/*
 
 #
