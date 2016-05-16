@@ -86,6 +86,12 @@ RUN sed -i -e "s/^bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/my.cnf \
 RUN chown -R wocker:wocker /var/www/wordpress
 
 #
+# Install and init Wordmove
+#
+RUN gem install wordmove --no-ri --no-rdoc
+
+
+#
 # Open ports
 #
 EXPOSE 80 3306
