@@ -99,7 +99,7 @@ EXPOSE 80 3306
 #
 # SSH FORWARD
 #
-RUN --rm -v $(readlink -f $SSH_AUTH_SOCK):/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent debian:jessie ssh-add -l
+RUN -v $(readlink -f $SSH_AUTH_SOCK):/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent debian:jessie ssh-add -l
 
 
 #
