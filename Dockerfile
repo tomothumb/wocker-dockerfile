@@ -97,6 +97,12 @@ RUN gem install wordmove --no-ri --no-rdoc
 EXPOSE 80 3306
 
 #
+# SSH FORWARD
+#
+RUN --rm -v $(readlink -f $SSH_AUTH_SOCK):/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent debian:jessie ssh-add -l
+
+
+#
 # Supervisor
 #
 RUN mkdir -p /var/log/supervisor
